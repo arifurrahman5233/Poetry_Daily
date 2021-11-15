@@ -4,6 +4,7 @@ import useAuth from '../../Hooks/useAuth';
 import OrderList from './OrderList/OrderList';
 import ReviewList from './ReviewList/ReviewList';
 import userPhoto from '../../images/user.png'
+import Payment from './Payment/Payment';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
@@ -25,6 +26,7 @@ const Dashboard = () => {
                             </div>
                             <div className="p-3 border bg-light">
                                 <Link to={`${url}/reviewList`} className="text-decoration-none fw-bold"><i className="fas fa-pen"></i> Review List</Link>
+                                <Link to={`${url}/payment`} className="text-decoration-none fw-bold"><i className="fas fa-pen"></i> Payment</Link>
                             </div>
                         </div>
                         <div className="col-9">
@@ -38,6 +40,9 @@ const Dashboard = () => {
 
                                 <Route path={`${path}/reviewList`}>
                                     <ReviewList></ReviewList>
+                                </Route>
+                                <Route path={`${path}/payment`}>
+                                    <Payment></Payment>
                                 </Route>
                             </Switch>
                         </div>

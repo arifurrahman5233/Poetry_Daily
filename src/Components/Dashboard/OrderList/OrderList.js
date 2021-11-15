@@ -13,7 +13,7 @@ const OrderList = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setOrder(data));
-    }, []);
+    }, [user.email]);
 
     // DELETE AN BOOK
     const handleDeleteOrder = id => {

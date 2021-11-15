@@ -11,7 +11,7 @@ const ReviewList = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setReview(data));
-    }, []);
+    }, [user.email]);
 
     return (
         <div>
